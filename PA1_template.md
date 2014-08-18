@@ -21,6 +21,23 @@ plot(seq_along(sum_of_steps),sum_of_steps,type="h",main="Histogram Of Number Of 
 ```
 
 ![plot of chunk Plotting First Histogram ](figure/Plotting First Histogram .png) 
+* Total Mean And Median
+
+```r
+mean(sum_of_steps,na.rm=TRUE)
+```
+
+```
+## [1] 9354
+```
+
+```r
+median(sum_of_steps,na.rm=TRUE)
+```
+
+```
+## [1] 10395
+```
 * Mean And Median Of Total Number Of Steps Taken Per Day
 
 ```r
@@ -100,6 +117,11 @@ for ( i in 1:length(interval)){
     max_interval<-interval_means[[i]]
   }
 }
+print(max_interval_index)
+```
+
+```
+## [1] 835
 ```
 
 
@@ -133,10 +155,27 @@ for (i in 1:length(sum_of_steps_clean)){
 * Histogram Of Total Number Of Steps Per Days For Cleaned Data
 
 ```r
-plot(seq_along(sum_of_steps),sum_of_steps_clean,type="h",main="Histogram Of Total Number Of Steps Per Days For Cleaned Data")
+plot(seq_along(sum_of_steps_clean),sum_of_steps_clean,type="h",main="Histogram Of Total Number Of Steps Per Days For Cleaned Data")
 ```
 
 ![plot of chunk Plotting Second Histogram ](figure/Plotting Second Histogram .png) 
+* Total Mean And Median
+
+```r
+mean(sum_of_steps_clean)
+```
+
+```
+## [1] 10766
+```
+
+```r
+median(sum_of_steps_clean)
+```
+
+```
+## [1] 10766
+```
 * Mean And Median Of Total Number Of Steps Taken Per Day For Cleaned Data
 
 ```r

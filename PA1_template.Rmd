@@ -21,6 +21,12 @@ plot(seq_along(sum_of_steps),sum_of_steps,type="h",main="Histogram Of Number Of 
 
 
 ```
+* Total Mean And Median
+```{r Total Mean And Median, echo=TRUE}
+mean(sum_of_steps,na.rm=TRUE)
+median(sum_of_steps,na.rm=TRUE)
+
+```
 * Mean And Median Of Total Number Of Steps Taken Per Day
 ```{r Calc Mean And Median 1 , echo=TRUE}
 Mean<-lapply(splited_data,mean,na.rm=TRUE)
@@ -53,7 +59,7 @@ for ( i in 1:length(interval)){
     max_interval<-interval_means[[i]]
   }
 }
-
+print(max_interval_index)
 ```
 
 
@@ -82,9 +88,14 @@ for (i in 1:length(sum_of_steps_clean)){
 ```
 * Histogram Of Total Number Of Steps Per Days For Cleaned Data
 ```{r Plotting Second Histogram , echo=TRUE}
-plot(seq_along(sum_of_steps),sum_of_steps_clean,type="h",main="Histogram Of Total Number Of Steps Per Days For Cleaned Data")
+plot(seq_along(sum_of_steps_clean),sum_of_steps_clean,type="h",main="Histogram Of Total Number Of Steps Per Days For Cleaned Data")
 
 
+```
+* Total Mean And Median
+```{r Total Media And Median 2 , echo=TRUE}
+mean(sum_of_steps_clean)
+median(sum_of_steps_clean)
 ```
 * Mean And Median Of Total Number Of Steps Taken Per Day For Cleaned Data
 ```{r Calc Meand And Median 2 , echo=TRUE}
